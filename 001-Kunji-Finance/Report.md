@@ -1,16 +1,24 @@
 # Overview
 ## About P2PAudits
+ P2P Audit, we source top talent from across the web3 ecosystem to put together the best team possible for your project, unlike traditional auditing organizations that employ teams of full-time security experts.
 
+We understand that your project may have unique requirements and timelines, and we are flexible in accommodating your needs. Our goal is to work with you to ensure the security and reliability of your smart contracts, so you can focus on the growth and success of your project.
 
 ### P2PAuditKatana
-
+The Auditkatana bot is an advanced AI-integrated tool that surpasses all other automated tools in the market, boasting an exceptional track record of zero false positives issues. Its primary objective is to assist in the identification of over 100 smart contract bugs and gas optimization issues. Additionally, the bot offers valuable suggestions to enhance the security of the code, ensuring its robustness and reliability. With its cutting-edge capabilities, the Auditkatana bot is revolutionizing the field of smart contract auditing, providing unparalleled accuracy and efficiency.
 
 ## Summary
+This report has been prepared for Kunji Finance using P2PAuditkatana to scan and discover vulnerabilities and safe coding practices in their smart contract including the libraries used by the contract that are not officially recognized. The P2PAuditkatana tool runs a comprehensive static analysis on the Solidity code and finds vulnerabilities ranging from minor gas optimizations to major vulnerabilities leading to the loss of funds. The coverage scope pays attention to all the informational and critical vulnerabilities with over (100+) modules. The scanning and auditing process covers the following areas:
 
+- Various common and uncommon attack vectors will be investigated to ensure that the smart contracts are secure from malicious actors.
+- The scanner modules find and flag issues related to Gas optimizations that help in reducing the overall Gas cost.
+- It scans and evaluates the codebase against industry best practices and standards to ensure compliance.
+- It makes sure that the officially recognized libraries used in the code are secure and up to date.
+
+The P2PAuditkatana Team recommends performing a manual audit to identify any vulnerabilities that are introduced after Kunji Finance introduces new features or refactors the code.
 
 ## Scope
-
-
+The code under review can be found within the [Readme.md](https://github.com/P2PAudit/Audit_Reports/001-Kunji-Finance/README.md), and is composed of multiple smart contract and interfaces written in the Solidity programming language and includes 1856 nSLOC- normalized source lines of code (only source-code lines; no comments, no blank lines).
 
 
 # Severity classification
@@ -428,3 +436,4 @@ There are multiple instances of this issue in the contracts.
 <br />
 
 # Disclaimer:
+A smart contract security review, as a comprehensive evaluation process, cannot provide absolute assurance regarding the absence of vulnerabilities. It necessitates a meticulous allocation of time, resources, and expertise to identify as many potential vulnerabilities as possible. Despite our diligent efforts, we, as a team, cannot guarantee 100% security after conducting the review, nor can we assure the discovery of all possible issues within your smart contracts. Consequently, we highly recommend implementing subsequent security reviews, bug bounty programs, and on-chain monitoring to reinforce the overall security posture of your smart contracts. By adopting these proactive measures, you can enhance the robustness and resilience of your smart contract ecosystem.

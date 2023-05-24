@@ -1,4 +1,4 @@
-![](assets/p2p.png)
+![](assets/bannerp2p.png)
 
 # Audit_Reports
 
