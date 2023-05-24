@@ -18,7 +18,7 @@ This report has been prepared for Kunji Finance using P2PAuditkatana to scan and
 The P2PAuditkatana Team recommends performing a manual audit to identify any vulnerabilities that are introduced after Kunji Finance introduces new features or refactors the code.
 
 ## Scope
-The code under review can be found within the [Readme.md](https://github.com/P2PAudit/Audit_Reports/001-Kunji-Finance/README.md), and is composed of multiple smart contract and interfaces written in the Solidity programming language and includes 1856 nSLOC- normalized source lines of code (only source-code lines; no comments, no blank lines).
+The code under review can be found within the [Readme.md](https://www.p2paudit.xyz/reports/001-Kunji-Finance/Details), and is composed of multiple smart contract and interfaces written in the Solidity programming language and includes 1856 nSLOC- normalized source lines of code (only source-code lines; no comments, no blank lines).
 
 
 # Severity classification
