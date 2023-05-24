@@ -31,13 +31,13 @@ The code under review can be found within the [Readme.md](https://github.com/P2P
 <br />
 
 
-| **Findings Summary** |
-| --- |
-| **High: 0 issues** |
-| **Medium: 2 issues** |
-| **Low: 3 issues** |
-| **Informational: 6 issues** |
-| **Gas Optimizations: 6 issues** |
+| **Findings Summary** | **Issues** |
+| --- | --- |
+| **High:** | **0 issues** |
+| **Medium:** | **2 issues** |
+| **Low:** | **3 issues** |
+| **Informational:** | **6 issues** |
+| **Gas Optimizations:** | **6 issues** |
 
 | Sl. No. | Name | Severity |
 | --- | --- | --- |
@@ -70,9 +70,6 @@ It is good to add a require() statement that checks the return value of token tr
 contracts/UsersVault.sol:525:                IERC20Upgradeable(underlyingTokenAddress).transfer(
 ```
 
-### Reference:
-This [similar medium-severity finding](https://consensys.net/diligence/audits/2021/01/fei-protocol/#unchecked-return-value-for-iweth-transfer-call) from Consensys Diligence Audit of Fei Protocol.
-
 ### Recommended Mitigation Steps:
 Consider using safeTransfer/safeTransferFrom or require() consistently.
 
@@ -89,7 +86,7 @@ contracts/UsersVault.sol:364:            vaultProfit = overallProfit - ((overall
 ### Recommended Mitigation:
 By doing all our multiplications first, we mitigate rounding related issues as much as possible.
 
-### References:**
+### References:
 https://soliditydeveloper.com/solidity-design-patterns-multiply-before-dividing
 
 <br />
@@ -243,7 +240,7 @@ https://code4rena.com/reports/2022-06-notional-coop/#10-use-a-more-recent-versio
 ## I-04. Contracts should have full test coverage
 While 100% code coverage does not guarantee that there are no bugs, it often will catch easy-to-find bugs, and will ensure that there are fewer regressions when the code invariably has to be modified. Furthermore, in order to get full coverage, code authors will often have to re-organize their code so that it is more modular, so that each component can be tested separately, which reduces interdependencies between modules and layers, and makes for code that is easier to reason about and audit. Contracts should have 90%+ code coverage.
 
-## References:
+### References:
 https://gist.github.com/CloudEllie/6639dbfd7dc1809a3baa28bb2895e1d9#n31-contracts-should-have-full-test-coverage
 
 <br />
@@ -253,7 +250,7 @@ https://gist.github.com/CloudEllie/6639dbfd7dc1809a3baa28bb2895e1d9#n31-contract
 
 *There are multiple instances of this issue in the contracts:*
 
-## References:
+### References:
 https://docs.soliditylang.org/en/v0.8.17/natspec-format.html
 
 <br />
@@ -261,6 +258,7 @@ https://docs.soliditylang.org/en/v0.8.17/natspec-format.html
 ## I-06. Variable names don't follow the Solidity style guide
 For `constant` variable names, each word should use all capital letters, with underscores separating each word (CONSTANT_CASE). But there are multiple instances in the contract where this pattern isn’t followed.
 
+### Instances:
 ```solidity
 contracts/adapters/gmx/GMXAdapter.sol:25:    address constant public gmxRouter = 0xaBBc5F99639c9B6bCb58544ddf04EFA6802F4064;
 contracts/adapters/gmx/GMXAdapter.sol:26:    address constant public gmxPositionRouter = 0xb87a436B93fFE9D75c5cFA7bAcFff96430b09868;
@@ -374,6 +372,7 @@ I suggest removing explicit initializations for default values.
 ## G-05. Using private rather than public for constants, saves gas
 If needed, the values can be read from the verified contract source code, or if there are multiple values there can be a single getter function that [returns a tuple](https://github.com/code-423n4/2022-08-frax/blob/90f55a9ce4e25bceed3a74290b854341d8de6afa/src/contracts/FraxlendPair.sol#L156-L178) of the values of all currently-public constants. Saves **3406-3606 gas** in deployment gas due to the compiler not having to create non payable getter functions for deployment calldata, not having to store the bytes of the value outside of where it's used, and not adding another entry to the method ID table
 
+### Instances:
 ```solidity
 contracts/adapters/gmx/GMXAdapter.sol:25:    address constant public gmxRouter = 0xaBBc5F99639c9B6bCb58544ddf04EFA6802F4064;
 contracts/adapters/gmx/GMXAdapter.sol:26:    address constant public gmxPositionRouter = 0xb87a436B93fFE9D75c5cFA7bAcFff96430b09868;
@@ -404,7 +403,6 @@ https://gist.github.com/CloudEllie/6639dbfd7dc1809a3baa28bb2895e1d9#g23-function
 If a function modifier such as onlyOwner is used, the function will revert if a normal user tries to pay the function. Marking the function as payable will lower the gas cost for legitimate callers because the compiler will not include checks for whether a payment was provided. The extra opcodes avoided are CALLVALUE(2),DUP1(3),ISZERO(3),PUSH2(3),JUMPI(10),PUSH1(3),DUP1(3),REVERT(0),JUMPDEST(1),POP(2), which costs an average of about 21 gas per call to the function, in addition to the extra deployment cost.
 
 ### Instances:
-
 ```solidity
 contracts/ContractsFactory.sol:
    67:     function addInvestor(address _investorAddress) external onlyOwner {
