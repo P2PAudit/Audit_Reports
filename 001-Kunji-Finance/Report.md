@@ -40,7 +40,7 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 | **Gas Optimizations:** | **6 issues** |
 
 | Sl. No. | Name | Severity | Status |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | M-01 | <a href="#m-01-use-safetransfersafetransferfrom-consistently-instead-of-transfertransferfrom" >Use safeTransfer/safeTransferFrom consistently instead of transfer/transferFrom</a> | Medium | Fixed |
 | M-02 | <a href="#m-02-precision-loss-in-calculation-for-vaultprofit" >Precision loss in Calculation for vaultProfit</a> | Medium | Fixed |
 | L-01 | <a href="#l-01-use-safeapprove-instead-of-approve" >Use safeApprove() instead of approve()</a> | Low | Acknowledged |
