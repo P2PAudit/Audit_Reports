@@ -39,6 +39,8 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 | **Informational:** | **6 issues** |
 | **Gas Optimizations:** | **6 issues** |
 
+# Detailed Summary of Findings:
+
 | Sl. No. | Name | Severity | Status |
 | --- | --- | --- | --- |
 | M-01 | <a href="#m-01-use-safetransfersafetransferfrom-consistently-instead-of-transfertransferfrom" >Use safeTransfer/safeTransferFrom consistently instead of transfer/transferFrom</a> | Medium | Fixed |
