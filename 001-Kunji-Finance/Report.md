@@ -39,25 +39,25 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 | **Informational:** | **6 issues** |
 | **Gas Optimizations:** | **6 issues** |
 
-| Sl. No. | Name | Severity |
+| Sl. No. | Name | Severity | Status |
 | --- | --- | --- |
-| M-01 | <a href="#m-01-use-safetransfersafetransferfrom-consistently-instead-of-transfertransferfrom" >Use safeTransfer/safeTransferFrom consistently instead of transfer/transferFrom</a> | Medium |
-| M-02 | <a href="#m-02-precision-loss-in-calculation-for-vaultprofit" >Precision loss in Calculation for vaultProfit</a> | Medium |
-| L-01 | <a href="#l-01-use-safeapprove-instead-of-approve" >Use safeApprove() instead of approve()</a> | Low |
-| L-02 | <a href="#l-02-avoid-using-floating-pragma" >Avoid using Floating Pragma</a> | Low |
-| L-03 | <a href="#l-03-lack-of-2-step-ownership-transfer" >Lack of 2-step Ownership transfer</a> | Low |
-| I-01 | <a href="#i-01-open-todos" >Open TODOs</a> | Info |
-| I-02 | <a href="#i-02-unused-receive-function-will-lock-ether-in-contract" >Unused receive() function will lock Ether in contract</a> | Info |
-| I-03 | <a href="#i-03-use-a-more-recent-version-of-solidity" >Use a more recent version of solidity</a> | Info |
-| I-04 | <a href="#i-04-contracts-should-have-full-test-coverage" >Contracts should have full test coverage</a> | Info |
-| I-05 | <a href="#i-05-file-is-missing-natspec" >File is missing NatSpec</a> | Info |
-| I-06 | <a href="#i-06-variable-names-dont-follow-the-solidity-style-guide" >Variable names don't follow the Solidity style guide</a> | Info |
-| G-01 | <a href="#g-01-pre-increment-costs-less-gas-as-compared-to-post-increment" >Pre-increment costs less gas as compared to Post-increment</a> | Gas Optimization |
-| G-02 | <a href="#g-02-custom-errors-instead-of-revert-strings-to-save-gas" >Custom Errors instead of Revert Strings to save Gas</a> | Gas Optimization |
-| G-03 | <a href="#g-03-strict-inequalities--are-more-expensive-than-non-strict-ones-" >Strict inequalities (>) are more expensive than non-strict ones (>=)</a> | Gas Optimization |
-| G-04 | <a href="#g-04-variables-no-need-to-explicitly-initialize-variables-with-default-values" >Variables: No need to explicitly initialize variables with default values</a> | Gas Optimization |
-| G-05 | <a href="#g-05-using-private-rather-than-public-for-constants-saves-gas" >Using private rather than public for constants, saves gas</a> | Gas Optimization |
-| G-06 | <a href="#g-06-functions-guaranteed-to-revert-when-called-by-normal-users-can-be-markedpayable" >Functions guaranteed to revert when called by normal users can be marked payable</a> | Gas Optimization |
+| M-01 | <a href="#m-01-use-safetransfersafetransferfrom-consistently-instead-of-transfertransferfrom" >Use safeTransfer/safeTransferFrom consistently instead of transfer/transferFrom</a> | Medium | Fixed |
+| M-02 | <a href="#m-02-precision-loss-in-calculation-for-vaultprofit" >Precision loss in Calculation for vaultProfit</a> | Medium | Fixed |
+| L-01 | <a href="#l-01-use-safeapprove-instead-of-approve" >Use safeApprove() instead of approve()</a> | Low | Acknowledged |
+| L-02 | <a href="#l-02-avoid-using-floating-pragma" >Avoid using Floating Pragma</a> | Low | Acknowledged |
+| L-03 | <a href="#l-03-lack-of-2-step-ownership-transfer" >Lack of 2-step Ownership transfer</a> | Low | Acknowledged |
+| I-01 | <a href="#i-01-open-todos" >Open TODOs</a> | Info | Acknowledged |
+| I-02 | <a href="#i-02-unused-receive-function-will-lock-ether-in-contract" >Unused receive() function will lock Ether in contract</a> | Info | Acknowledged |
+| I-03 | <a href="#i-03-use-a-more-recent-version-of-solidity" >Use a more recent version of solidity</a> | Info | Acknowledged |
+| I-04 | <a href="#i-04-contracts-should-have-full-test-coverage" >Contracts should have full test coverage</a> | Info | Acknowledged |
+| I-05 | <a href="#i-05-file-is-missing-natspec" >File is missing NatSpec</a> | Info | Acknowledged |
+| I-06 | <a href="#i-06-variable-names-dont-follow-the-solidity-style-guide" >Variable names don't follow the Solidity style guide</a> | Info | Acknowledged |
+| G-01 | <a href="#g-01-pre-increment-costs-less-gas-as-compared-to-post-increment" >Pre-increment costs less gas as compared to Post-increment</a> | Gas Optimization | Acknowledged |
+| G-02 | <a href="#g-02-custom-errors-instead-of-revert-strings-to-save-gas" >Custom Errors instead of Revert Strings to save Gas</a> | Gas Optimization | Acknowledged |
+| G-03 | <a href="#g-03-strict-inequalities--are-more-expensive-than-non-strict-ones-" >Strict inequalities (>) are more expensive than non-strict ones (>=)</a> | Gas Optimization | Acknowledged |
+| G-04 | <a href="#g-04-variables-no-need-to-explicitly-initialize-variables-with-default-values" >Variables: No need to explicitly initialize variables with default values</a> | Gas Optimization | Acknowledged |
+| G-05 | <a href="#g-05-using-private-rather-than-public-for-constants-saves-gas" >Using private rather than public for constants, saves gas</a> | Gas Optimization | Acknowledged |
+| G-06 | <a href="#g-06-functions-guaranteed-to-revert-when-called-by-normal-users-can-be-markedpayable" >Functions guaranteed to revert when called by normal users can be marked payable</a> | Gas Optimization | Acknowledged |
 
 
 # Medium Severity Findings:
