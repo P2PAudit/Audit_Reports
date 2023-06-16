@@ -41,7 +41,7 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 | G-03 | <a href="#" >Custom Errors instead of Revert Strings to save Gas</a> | Gas Optimization |
 | G-04 | <a href="#" >Strict inequalities (>) are more expensive than non-strict ones (>=)</a> | Gas Optimization |
 
-<br />̧
+<br />
 
 # High Severity Issue:
 **No high-severity issues were found.**
