@@ -62,6 +62,11 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 | G-06 | <a href="#g-06-functions-guaranteed-to-revert-when-called-by-normal-users-can-be-markedpayable" >Functions guaranteed to revert when called by normal users can be marked payable</a> | Gas Optimization | Acknowledged |
 
 
+# High Severity Issue:
+**No high-severity issues were found.**
+
+<br />
+
 # Medium Severity Findings:
 
 ## M-01. **Use safeTransfer/safeTransferFrom consistently instead of transfer/transferFrom**
