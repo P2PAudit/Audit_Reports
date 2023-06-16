@@ -30,16 +30,16 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 
 | Sl. No. | Name | Severity |
 | --- | --- | --- |
-| M-01 | <a href="#" >Transfer ETH by using transfer() may cause this transaction to fail </a>| Medium |
-| L-01 | <a href="#" >Avoiding the use of floating Pragma.</a> | Low |
-| L-02 | <a href="#" >Lack of 2-step transfer of ownership</a> | Low |
-| L-03 | <a href="#" >Lack of 0-address check.</a> | Low |
-| I-01 | <a href="#" >Use the latest version of solidity</a> | Informational |
-| I-02 | <a href="#" >Contracts should have full test coverage</a> | Informational |
-| G-01 | <a href="#" >Using > 0 costs more gas than != 0 when used on a uint in a require() statement</a> | Gas Optimization |
-| G-02 | <a href="#" >Splitting require() statements that use && saves gas</a> | Gas Optimization |
-| G-03 | <a href="#" >Custom Errors instead of Revert Strings to save Gas</a> | Gas Optimization |
-| G-04 | <a href="#" >Strict inequalities (>) are more expensive than non-strict ones (>=)</a> | Gas Optimization |
+| M-01 | <a href="#m-01-transfer-eth-by-usingtransfermay-cause-this-transaction-to-fail" >Transfer ETH by using transfer() may cause this transaction to fail </a>| Medium |
+| L-01 | <a href="#l-01-avoiding-the-use-of-floating-pragma" >Avoiding the use of floating Pragma.</a> | Low |
+| L-02 | <a href="#l-02-lack-of-2-step-transfer-of-ownership" >Lack of 2-step transfer of ownership</a> | Low |
+| L-03 | <a href="#l-03-lack-of-0-address-check" >Lack of 0-address check.</a> | Low |
+| I-01 | <a href="#i-01-use-the-latest-version-of-solidity" >Use the latest version of solidity</a> | Informational |
+| I-02 | <a href="#i-02-contracts-should-have-full-test-coverage" >Contracts should have full test coverage</a> | Informational |
+| G-01 | <a href="#g-01-using--0-costs-more-gas-than--0-when-used-on-a-uint-in-a-require-statement" >Using > 0 costs more gas than != 0 when used on a uint in a require() statement</a> | Gas Optimization |
+| G-02 | <a href="#g-02-splitting-require-statements-that-use--saves-gas" >Splitting require() statements that use && saves gas</a> | Gas Optimization |
+| G-03 | <a href="#g-03-custom-errors-instead-of-revert-strings-to-save-gas" >Custom Errors instead of Revert Strings to save Gas</a> | Gas Optimization |
+| G-04 | <a href="#g-04-strict-inequalities--are-more-expensive-than-non-strict-ones-" >Strict inequalities (>) are more expensive than non-strict ones (>=)</a> | Gas Optimization |
 
 <br />
 
@@ -217,6 +217,7 @@ MDUToken.sol:234:            _value > 0 &&
 
 ### Recommended Mitigation Steps:
 Change the code to 
+
 ```solidity
  // From:
  _value > 0 &&
