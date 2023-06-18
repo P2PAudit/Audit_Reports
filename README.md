@@ -12,7 +12,7 @@ The Auditkatana bot is an advanced AI-integrated tool that surpasses all other a
 
 # Audit_Reports
 
-| Serial No. | Date      | Project Name  | Audit Report |
+| Serial No. | Date      | Project Name  | Audit Report | 
 |------------|-----------|---------------|--------------|
 | 001.       | May, 2023 | [Kunji Finance](https://www.kunji.finance/) |      [Link](https://www.p2paudit.xyz/reports/001-Kunji-Finance)        |
-|            |           |               |              |
+| 002.       | June, 2023 | [EtherVerse Token](https://www.etherverse.in/) |      [Link](https://www.p2paudit.xyz/reports/002-EtherVerse-Token)  
