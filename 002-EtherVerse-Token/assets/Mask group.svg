@@ -1,9 +1,9 @@
-<svg width="694" height="720" viewBox="0 0 694 720" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<mask id="mask0_12_6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="694" height="720">
-<ellipse cx="347" cy="360" rx="347" ry="360" fill="#D9D9D9"/>
+<svg width="72" height="75" viewBox="0 0 72 75" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_12_6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="72" height="75">
+<ellipse cx="36" cy="37.3487" rx="36" ry="37.3487" fill="#D9D9D9"/>
 </mask>
 <g mask="url(#mask0_12_6)">
-<rect x="-190" width="1152" height="720" fill="url(#pattern0)"/>
+<rect x="-19.7118" width="119.516" height="74.6974" fill="url(#pattern0)"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
