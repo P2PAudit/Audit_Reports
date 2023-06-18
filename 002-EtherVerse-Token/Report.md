@@ -30,7 +30,7 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 
 | Sl. No. | Name | Severity |
 | --- | --- | --- |
-| M-01 | <a href="#m-01-transfer-eth-by-usingtransfermay-cause-this-transaction-to-fail" >Transfer ETH by using transfer() may cause this transaction to fail </a>| Medium |
+| M-01 | <a href="#m-01-transfer-eth-by-usingtransfermay-cause-this-transaction-to-fail" >Transfer ETH by using transfer() may cause this transaction to fail </a>| Medium |
 | L-01 | <a href="#l-01-avoiding-the-use-of-floating-pragma" >Avoiding the use of floating Pragma.</a> | Low |
 | L-02 | <a href="#l-02-lack-of-2-step-transfer-of-ownership" >Lack of 2-step transfer of ownership</a> | Low |
 | L-03 | <a href="#l-03-lack-of-0-address-check" >Lack of 0-address check.</a> | Low |
@@ -50,11 +50,12 @@ The code under review can be found within the [Readme.md](https://www.p2paudit.x
 
 # Medium Severity Findings:
 
-## M-01. **Transfer ETH by using transfer() may cause this transaction to fail**
-Transferring ETH by using transfer() may cause this transaction to fail. Due to the fact that .transfer() and .send() forward exactly 2,300 gas to the recipient. This hardcoded gas stipend aimed to prevent reentrancy vulnerabilities, but this only makes sense under the assumption that gas costs are constant. Recently EIP 1884 was included in the Istanbul hard fork. One of the changes included in EIP 1884 is an increase in the gas cost of the SLOAD operation, causing a contract's fallback function to cost more than 2300 gas.
+## M-01. **Transfer ETH by using transfer() may cause this transaction to fail**
+Transferring ETH by using transfer() may cause this transaction to fail. Due to the fact that .transfer() and .send() forward exactly 2,300 gas to the recipient. This hardcoded gas stipend aimed to prevent reentrancy vulnerabilities, but this only makes sense under the assumption that gas costs are constant. Recently EIP 1884 was included in the Istanbul hard fork. One of the changes included in EIP 1884 is an increase in the gas cost of the SLOAD operation, causing a contract's fallback function to cost more than 2300 gas.
 
 ### Instances:
 File: MDUToken.sol:301:
+
 ```solidity
 function Investingtoken() payable public returns(bool success) {
 			     uint256 tokens =  msg.value / tokenPrice;
@@ -68,7 +69,7 @@ function Investingtoken() payable public returns(bool success) {
 ```
 
 ### Recommended Mitigation Steps:
-Use `call{value: msg.value}()` instead of `transfer` to send Ether.
+Use `call{value: msg.value}()` instead of `transfer` to send Ether.
 
 ```solidity
 (bool success, ) = payable(recipient).call{value: msg.value}("");
@@ -96,10 +97,11 @@ Avoid Floating pragma and use fixed solidity version
 <br />
 
 ## L-02. **Lack of 2-step transfer of ownership**
-Ownable2Step is safer than Ownable for smart contracts because the owner cannot accidentally transfer smart contract ownership to a mistyped address. Rather than directly transferring to the new owner, the transfer only completes when the new owner accepts ownership. Also, If the nominated EOA account is not a valid account, it is entirely possible the owner may accidentally transfer ownership to an uncontrolled account, breaking all functions with the onlyOwner() modifier.
+Ownable2Step is safer than Ownable for smart contracts because the owner cannot accidentally transfer smart contract ownership to a mistyped address. Rather than directly transferring to the new owner, the transfer only completes when the new owner accepts ownership. Also, If the nominated EOA account is not a valid account, it is entirely possible the owner may accidentally transfer ownership to an uncontrolled account, breaking all functions with the onlyOwner() modifier.
 
 ### Instances:
 File: MDUToken.sol:81:
+
 ```solidity
 function transferOwnership(address newOwner) public virtual onlyOwner {
         require(
@@ -117,7 +119,7 @@ function _transferOwnership(address newOwner) internal virtual {
 ```
 
 ### Recommended Mitigation Steps:
-Recommend considering implementing a two step process where the owner nominates an account and the nominated account needs to call an acceptOwnership() function for the transfer of ownership to fully succeed. This ensures the nominated EOA account is a valid and active account.
+Recommend considering implementing a two step process where the owner nominates an account and the nominated account needs to call an acceptOwnership() function for the transfer of ownership to fully succeed. This ensures the nominated EOA account is a valid and active account.
 
 <br />
 
@@ -146,6 +148,7 @@ When deploying contracts, you should use the latest released version of Solidity
 
 ### Instances:
 File: MDUToken.sol:3:
+
 ```solidity
 pragma solidity ^0.8.15;
 ```
